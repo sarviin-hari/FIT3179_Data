@@ -1,0 +1,95 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "width": 1350,
+    "height": 700,
+    "projection": {
+      "type": "mercator",
+      "scale": 4250,
+      "center": [107.6, 4.2105]
+    },
+    "data": {
+      "url": "https://raw.githubusercontent.com/sarviin-hari/FIT3179_Data/refs/heads/main/malaysia.topojson",
+      "format": {
+        "type": "topojson",
+        "feature": "states"
+      }
+    },
+    "transform": [
+      {
+        "lookup": "properties.Name",
+        "from": {
+          "data": {
+            "url": "https://raw.githubusercontent.com/sarviin-hari/FIT3179_Data/refs/heads/main/Labour-Force-Data.csv"
+          },
+          "key": "state",
+          "fields": ["lf_employed_per_population", "Longitude", "Latitude", "Longitude2", "Latitude2", "state"]
+        }
+      }
+    ],
+    "layer": [
+      {
+        "mark": {
+          "type": "geoshape",
+          "stroke": "black"
+        },
+        "encoding": {
+            "color": {
+              "field": "lf_employed_per_population",
+              "type": "quantitative",
+              "title": ["Percentage of", "Employed Labour", "Force to", "Population"],
+              "scale": {
+                "type": "threshold",
+                "domain": [5, 10, 15, 20, 25, 30, 35, 40, 45, 50, 55, 60], 
+                "range": ["#eaf1fb", "#dce8f8", "#b4cdf1", "#95b8ea", "#85aee8", "#6fa0e3", "#568fde", "#3e7fda", "#2463bd", "#1e5097", "#143769", "#0f2a52", "000000"]
+              },
+              "legend": {
+                "titleAlign": "center",
+                "titleAnchor": "middle",
+                "titleFontSize": 17,
+                "labelFontSize": 15,
+                "symbolStrokeWidth": 10,
+                "symbolSize": 1000
+
+              }
+          
+            },
+
+            "tooltip": [
+            {"field": "properties.Name", "type": "nominal", "title": "State"},
+            {"field": "lf_employed_per_population", "type": "quantitative", "title": "Percentage of  Employed Labour Force to Population", "format": ".2f"}
+        ]
+        }
+      },
+      {       
+        "data": {
+        "url": "https://raw.githubusercontent.com/sarviin-hari/FIT3179_Data/refs/heads/main/Labour-Force-Data.csv"},
+          "mark": "rule",
+          "encoding": {
+          "longitude": {"field": "Longitude", "type": "quantitative"},
+          "latitude": {"field": "Latitude", "type": "quantitative"},
+          "longitude2": {"field": "Longitude2", "type": "quantitative"},
+          "latitude2": {"field": "Latitude2", "type": "quantitative"},
+          "strokeWidth": {"value": 2},
+          "stroke": {"value": "black"}
+          }
+      },
+      {
+        "data": {
+          "url": "https://raw.githubusercontent.com/sarviin-hari/FIT3179_Data/refs/heads/main/Labour-Force-Data.csv"
+        },
+        "mark": {
+          "type": "text",
+          "fontSize": 17,
+          "color": "black",
+          "dy": 10
+        },
+        "encoding": {
+          "longitude": {"field": "Longitude2", "type": "quantitative"},
+          "latitude": {"field": "Latitude2", "type": "quantitative"},
+          "text": {"field": "state"}
+        }
+      }
+
+    ]
+  }
+  
