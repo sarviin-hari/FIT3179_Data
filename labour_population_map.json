@@ -1,95 +1,95 @@
 {
-    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-    "width": 1300,
-    "height": 700,
-    "projection": {
-      "type": "mercator",
-      "scale": 4250,
-      "center": [107.6, 4.2105]
-    },
-    "data": {
-      "url": "https://raw.githubusercontent.com/sarviin-hari/FIT3179_Data/refs/heads/main/malaysia.topojson",
-      "format": {
-        "type": "topojson",
-        "feature": "states"
-      }
-    },
-    "transform": [
-      {
-        "lookup": "properties.Name",
-        "from": {
-          "data": {
-            "url": "https://raw.githubusercontent.com/sarviin-hari/FIT3179_Data/refs/heads/main/Labour-Force-Data.csv"
-          },
-          "key": "state",
-          "fields": ["lf_employed_per_working_population", "Longitude", "Latitude", "Longitude2", "Latitude2", "state"]
-        }
-      }
-    ],
-    "layer": [
-      {
-        "mark": {
-          "type": "geoshape",
-          "stroke": "black"
-        },
-        "encoding": {
-            "color": {
-              "field": "lf_employed_per_working_population",
-              "type": "quantitative",
-              "title": ["Percentage (%)"],
-              "scale": {
-                "type": "threshold",
-                "domain": [10,20,30,40,50,60,70,80,90], 
-                "range": ["#f7fbff", "#deebf7", "#c6dbef", "#9ecae1", "#6baed6", "#4292c6", "#2171b5", "#08519c", "#08306b"]
-              },
-              "legend": {
-                "titleAlign": "center",
-                "titleAnchor": "middle",
-                "titleFontSize": 17,
-                "labelFontSize": 15,
-                "symbolStrokeWidth": 10,
-                "symbolSize": 1000
-
-              }
-          
-            },
-
-            "tooltip": [
-            {"field": "properties.Name", "type": "nominal", "title": "State"},
-            {"field": "lf_employed_per_working_population", "type": "quantitative", "title": "Percentage of Employed Labour Force to Working Population (%)", "format": ".2f"}
-        ]
-        }
-      },
-      {       
-        "data": {
-        "url": "https://raw.githubusercontent.com/sarviin-hari/FIT3179_Data/refs/heads/main/Labour-Force-Data.csv"},
-          "mark": "rule",
-          "encoding": {
-          "longitude": {"field": "Longitude", "type": "quantitative"},
-          "latitude": {"field": "Latitude", "type": "quantitative"},
-          "longitude2": {"field": "Longitude2", "type": "quantitative"},
-          "latitude2": {"field": "Latitude2", "type": "quantitative"},
-          "strokeWidth": {"value": 2},
-          "stroke": {"value": "black"}
-          }
-      },
-      {
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "width": 1300,
+  "height": 600,
+  "projection": {
+    "type": "mercator",
+    "scale": 4100,
+    "center": [107.6, 4.2105]
+  },
+  "data": {
+    "url": "https://raw.githubusercontent.com/sarviin-hari/FIT3179_Data/refs/heads/main/malaysia.topojson",
+    "format": {
+      "type": "topojson",
+      "feature": "states"
+    }
+  },
+  "transform": [
+    {
+      "lookup": "properties.Name",
+      "from": {
         "data": {
           "url": "https://raw.githubusercontent.com/sarviin-hari/FIT3179_Data/refs/heads/main/Labour-Force-Data.csv"
         },
-        "mark": {
-          "type": "text",
-          "fontSize": 17,
-          "color": "black",
-          "dy": 10
-        },
-        "encoding": {
-          "longitude": {"field": "Longitude2", "type": "quantitative"},
-          "latitude": {"field": "Latitude2", "type": "quantitative"},
-          "text": {"field": "state"}
-        }
+        "key": "state",
+        "fields": ["lf_employed_per_working_population", "Longitude", "Latitude", "Longitude2", "Latitude2", "state"]
       }
+    }
+  ],
+  "layer": [
+    {
+      "mark": {
+        "type": "geoshape",
+        "stroke": "black"
+      },
+      "encoding": {
+          "color": {
+            "field": "lf_employed_per_working_population",
+            "type": "quantitative",
+            "title": ["Percentage (%)"],
+            "scale": {
+              "type": "threshold",
+              "domain": [10,20,30,40,50,60,70,80,90], 
+              "range": ["#f7fbff", "#deebf7", "#c6dbef", "#9ecae1", "#6baed6", "#4292c6", "#2171b5", "#08519c", "#08306b"]
+            },
+            "legend": {
+              "titleAlign": "center",
+              "titleAnchor": "middle",
+              "titleFontSize": 17,
+              "labelFontSize": 15,
+              "symbolStrokeWidth": 10,
+              "symbolSize": 1000
 
-    ]
-  }
-  
+            }
+        
+          },
+
+          "tooltip": [
+          {"field": "properties.Name", "type": "nominal", "title": "State"},
+          {"field": "lf_employed_per_working_population", "type": "quantitative", "title": "Percentage of Employed Labour Force to Working Population (%)", "format": ".2f"}
+      ]
+      }
+    },
+    {       
+      "data": {
+      "url": "https://raw.githubusercontent.com/sarviin-hari/FIT3179_Data/refs/heads/main/Labour-Force-Data.csv"},
+        "mark": "rule",
+        "encoding": {
+        "longitude": {"field": "Longitude", "type": "quantitative"},
+        "latitude": {"field": "Latitude", "type": "quantitative"},
+        "longitude2": {"field": "Longitude2", "type": "quantitative"},
+        "latitude2": {"field": "Latitude2", "type": "quantitative"},
+        "strokeWidth": {"value": 2},
+        "stroke": {"value": "black"}
+        }
+    },
+    {
+      "data": {
+        "url": "https://raw.githubusercontent.com/sarviin-hari/FIT3179_Data/refs/heads/main/Labour-Force-Data.csv"
+      },
+      "mark": {
+        "type": "text",
+        "fontSize": 17,
+        "color": "black",
+        "dy": 10
+      },
+      "encoding": {
+        "longitude": {"field": "Longitude2", "type": "quantitative"},
+        "latitude": {"field": "Latitude2", "type": "quantitative"},
+        "text": {"field": "state"}
+      }
+    }
+
+  ]
+}
+
