@@ -56,7 +56,7 @@
 
             "tooltip": [
             {"field": "properties.Name", "type": "nominal", "title": "State"},
-            {"field": "lf_employed_per_working_population", "type": "quantitative", "title": "Percentage of Employed Labour Force to Working Population", "format": ".2f"}
+            {"field": "lf_employed_per_working_population", "type": "quantitative", "title": "Percentage of Employed Labour Force to Working Population", "format": ".2f%"}
         ]
         }
       },
