@@ -1,0 +1,49 @@
+state,Latitude,Longitude,category,value
+Johor,2.0229012,103.3147721,lf_employed,1812.2
+Kedah,6.209826499,100.3715035,lf_employed,1022.5
+Kelantan,5.402130199,102.0635972,lf_employed,768
+Melaka,2.3293744,102.2880962,lf_employed,441.9
+Negeri Sembilan,2.731895,102.1925319,lf_employed,518
+Pahang,3.6168822,102.5994547,lf_employed,736.5
+Perak,4.812181,100.9797908,lf_employed,1090.8
+Perlis,6.486839199,100.2577623,lf_employed,115.6
+Pulau Pinang,5.406501299,100.2559077,lf_employed,924.4
+Sabah,5.425735899,114.5326392,lf_employed,1999.8
+Sarawak,2.5023855,110.9547283,lf_employed,1405.3
+Selangor,3.5083304,101.304146,lf_employed,3697.4
+Terengganu,4.8630743,102.9949297,lf_employed,492
+Kuala Lumpur,3.1526589,101.7022205,lf_employed,831.6
+Labuan,5.316833599,112.448438,lf_employed,47
+Putrajaya,2.9384381,101.69223,lf_employed,38.6
+Johor,2.0229012,103.3147721,lf_unemployed,43.7
+Kedah,6.209826499,100.3715035,lf_unemployed,34.8
+Kelantan,5.402130199,102.0635972,lf_unemployed,32.8
+Melaka,2.3293744,102.2880962,lf_unemployed,12.3
+Negeri Sembilan,2.731895,102.1925319,lf_unemployed,14
+Pahang,3.6168822,102.5994547,lf_unemployed,20.7
+Perak,4.812181,100.9797908,lf_unemployed,31.9
+Perlis,6.486839199,100.2577623,lf_unemployed,2.6
+Pulau Pinang,5.406501299,100.2559077,lf_unemployed,21.7
+Sabah,5.425735899,114.5326392,lf_unemployed,176.7
+Sarawak,2.5023855,110.9547283,lf_unemployed,44.5
+Selangor,3.5083304,101.304146,lf_unemployed,112.2
+Terengganu,4.8630743,102.9949297,lf_unemployed,22.4
+Kuala Lumpur,3.1526589,101.7022205,lf_unemployed,27.4
+Labuan,5.316833599,112.448438,lf_unemployed,2.2
+Putrajaya,2.9384381,101.69223,lf_unemployed,0.6
+Johor,2.0229012,103.3147721,lf_outside,823.7
+Kedah,6.209826499,100.3715035,lf_outside,539.7
+Kelantan,5.402130199,102.0635972,lf_outside,505.5
+Melaka,2.3293744,102.2880962,lf_outside,222.7
+Negeri Sembilan,2.731895,102.1925319,lf_outside,259.9
+Pahang,3.6168822,102.5994547,lf_outside,397.7
+Perak,4.812181,100.9797908,lf_outside,599.1
+Perlis,6.486839199,100.2577623,lf_outside,62.6
+Pulau Pinang,5.406501299,100.2559077,lf_outside,371.2
+Sabah,5.425735899,114.5326392,lf_outside,907.6
+Sarawak,2.5023855,110.9547283,lf_outside,627.8
+Selangor,3.5083304,101.304146,lf_outside,1209.9
+Terengganu,4.8630743,102.9949297,lf_outside,345.3
+Kuala Lumpur,3.1526589,101.7022205,lf_outside,337.2
+Labuan,5.316833599,112.448438,lf_outside,24.9
+Putrajaya,2.9384381,101.69223,lf_outside,11.3
